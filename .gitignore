@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+Apply/__pycache__/
+Matched/__pycache__/
+db.sqlite3
+.idea/
+reset_users.py
+Apply/migrations/__pycache__/
+__pychache__/

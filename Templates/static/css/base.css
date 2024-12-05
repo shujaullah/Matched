@@ -1,0 +1,250 @@
+/* width */
+::-webkit-scrollbar {
+    width: 5px; /* width of vertical scrollbar */
+    height:3px; /* height of horizontal scrollbar */
+    /*display:none;*/
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /*background: #888;*/
+    background:black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+#navigation-bar{
+     overflow: hidden;
+     padding:15px;
+     min-width:20%;
+    width:20%;
+    display: flex;
+ }
+#page-btn, #nav-btn{
+    display:none;
+}
+#nav-btn{
+    transform: rotate(.5deg);
+}
+ #main{
+     height: 85%;
+      width:80%;
+     /*overflow-y:hidden;*/
+     /*overflow-x: hidden;*/
+ }
+ .rotate{
+     transform: rotate(180deg);
+ }
+ /*.shrink {*/
+ /*    max-width: 85px;*/
+ /*}*/
+ .hide{
+     display:none;
+ }
+ .bigger{
+     height:70px;
+ }
+.navbar-colors {
+    background: #f8f8f8;
+    font-size: 18px;
+    line-height: 1.42857143;
+    color: #333;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+
+a:hover{
+    color:black;
+    /*font-weight: bold;*/
+}
+
+#logoandburger{
+    height:62px;
+}
+.link-container{
+     height:50px;
+    /*text-decoration: none;*/
+}
+.link-container:hover{
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    font-size: large;
+    cursor: pointer;
+    text-decoration: none;
+}
+.link-section-text-center{
+    margin-left: -20%;
+}
+#profile-content{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    overflow: auto;
+    /*justify-content: space-evenly;*/
+}
+
+#profile-container{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#img-div{
+    padding: 2%;
+    width: 25%;
+    height:100%;
+}
+.bold-link:hover{
+    font-weight: bold;
+    color:black;
+}
+#profile-section{
+    width: 46%;
+    height: 100%;
+    padding: 2%;
+    overflow-y:auto;
+    overflow-x: hidden;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*justify-content-center align-items-center*/
+}
+.profile-link:hover{
+  border-bottom: 2px solid black;
+}
+#upload-section{
+    /*w-25 h-100 p-2*/
+    width: 25%;
+    height:100%;
+    min-height:100%;
+    padding: 1%;
+    overflow: hidden;
+}
+.bookmark :hover{
+    cursor: pointer;
+}
+.dashboard-item :hover{
+    /*cursor:pointer;*/
+    /*border-color: #66afe9;*/
+    /*outline: 0;*/
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);*/
+    /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);*/
+}
+#to-top{
+    /*display: none; !* Hidden by default *!*/
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+    opacity: 0.9;
+}
+#to-top:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+#login-div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width:65%;
+}
+#register-div{
+    width:57%
+}
+#login-container{
+    padding: 3% 10% 3%;
+    width: 85%;
+    height: 85%;
+    max-width: 1200px;
+}
+.home-card{
+    width:49.5%;
+    height: 75%;
+    overflow: hidden;
+}
+/*small screens*/
+@media only screen and (max-width:768px) {
+    #login-div{
+        width: 100%;
+        justify-content: unset;
+        align-items: unset;
+    }
+    #login-container{
+        padding: 5%;
+        width: 100%;
+        height: 100%;
+    }
+    .home-card{
+        width: 100%;
+        min-height: 57%;
+    }
+    #register-div{
+        width:100%
+    }
+}
+@media only screen and (max-width:800px){
+    #profile-form{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    }
+    #profile-container{
+        justify-content: space-between;
+        height: 100%;
+        min-height: 100%;
+        flex-direction: column;
+    }
+    #profile-form div{
+        width: 100%;
+    }
+    #profile-section{
+        height:999px;
+        min-height: 999px;
+    }
+    #upload-section{
+        height: 100px;
+        max-height: 300px;
+        min-height: 300px;
+    }
+
+    #img-div img, #img-div svg{
+        height: 100px;
+        width: 100px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #main {
+        width:100%;
+    }
+    #navigation-bar{
+        width:100%;
+        display: none;
+    }
+    #page-btn, #nav-btn{
+        display:block;
+    }
+    header{
+        justify-content: end;
+    }
+}
